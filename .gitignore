@@ -10,3 +10,7 @@
 *.lai
 *.la
 *.a
+
+# Mac Stuff
+.DS_Store
+Icon?
