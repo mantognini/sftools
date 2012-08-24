@@ -1,0 +1,3 @@
+S main.cpp
+O -lsfml-graphics -lsfml-window -lsfml-system -I../src/
+E test
