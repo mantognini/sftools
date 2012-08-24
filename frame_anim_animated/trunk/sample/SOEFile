@@ -1,8 +1,0 @@
-S main.cpp ../src/animated.cpp ../src/frame.cpp
-O -framework OpenGL 
-O -framework sfml-system 
-O -framework sfml-window 
-O -framework sfml-graphics 
-O -I../src/ 
-O -I../../../pausableclock/tags/REL-pausableclock-1.3/src/ 
-E sample
