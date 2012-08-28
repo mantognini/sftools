@@ -26,3 +26,70 @@
  @file sftools/Singleton/Singleton.tpp
  @brief Implements Singleton tool
  */
+ 
+ namespace sftools
+ {
+    namespace priv
+    {
+        template <class T>
+        struct Unique
+        {
+            static T* instance;
+        };
+        
+        template <class T>
+        T* Unique<T>::instance = 0;
+        
+        template <class T>
+        struct DefaultNew
+        {
+            T* operator()() 
+            {
+                return new T();
+            }
+        };
+    }
+    
+    
+    template <typename T, typename C>
+    T& Singleton<T, C>::getInstance()
+    {
+        if (!exists())
+        {
+            create();
+        }
+        
+        return *priv::Unique<T>::instance;
+    }
+    
+    template <typename T, typename C>
+    void Singleton<T, C>::create(bool force)
+    {
+        if (exists() && force)
+        {
+            destroy();
+            create(force);
+        }
+        else
+        {
+            C ctor;
+            priv::Unique<T>::instance = ctor();
+        }
+    }
+    
+    template <typename T, typename C>
+    void Singleton<T, C>::destroy()
+    {
+        if (exists())
+        {
+            delete priv::Unique<T>::instance;
+            priv::Unique<T>::instance = 0;
+        }
+    }
+    
+    template <typename T, typename C>
+    bool Singleton<T, C>::exists()
+    {
+        return priv::Unique<T>::instance != 0;
+    }
+ }

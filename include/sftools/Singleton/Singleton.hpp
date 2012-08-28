@@ -38,11 +38,57 @@
  */
 namespace sftools
 {
+    namespace priv
+    {
+        template <typename T>
+        class DefaultNew;
+    }
+
+    /*!
+     @class Singleton
+     @brief TODO
+     
+     TODO (example)
+     
+     @note With C++11 we could do even better : by using variadic template we
+     can customize more easily the construction of the unique instance and
+     probably even inherit from `T` so the singleton object could be used
+     everywhere `T` is used. However there might be issues with NonCopyable
+     and NonInstanceable.
+
+     @tparam T TOOD
+     @tparam C TODO
+     */
+    template <typename T, typename C = priv::DefaultNew<T>>
     class Singleton : NonCopyable, NonInstanceable
     {
+    public:
+        /*!
+         @brief TODO
+         
+         Calls `create` if needed
+         */
+        static T& getInstance();
 
+        /*!
+         @brief TODO
+
+         @param force TODO
+         */
+        static void create(bool force = false);
+
+        /*!
+         @brief TODO
+         */
+        static void destroy();
+
+        /*!
+         @brief TODO
+         */
+        static bool exists();
     };
 }
 
+#include <sftools/Singleton/Singleton.tpp>
 
 #endif // __SFTOOLS_SINGLETON_HPP__
