@@ -266,7 +266,7 @@ AUTOLINK_SUPPORT       = YES
 # func(std::string) {}). This also makes the inheritance and collaboration
 # diagrams that involve STL classes more complete and accurate.
 
-BUILTIN_STL_SUPPORT    = YES
+BUILTIN_STL_SUPPORT    = NO
 
 # If you use Microsoft's C++/CLI language, you should set this option to YES to
 # enable parsing support.
@@ -365,7 +365,7 @@ EXTRACT_ALL            = YES
 # If the EXTRACT_PRIVATE tag is set to YES all private members of a class
 # will be included in the documentation.
 
-EXTRACT_PRIVATE        = YES
+EXTRACT_PRIVATE        = NO
 
 # If the EXTRACT_PACKAGE tag is set to YES all members with package or internal
 # scope will be included in the documentation.
@@ -1007,7 +1007,7 @@ DOCSET_BUNDLE_ID       = com.github.mantognini.sftools
 # identify the documentation publisher. This should be a reverse domain-name
 # style string, e.g. com.mycompany.MyDocSet.documentation.
 
-DOCSET_PUBLISHER_ID    = com.github.mantognini.sftools
+DOCSET_PUBLISHER_ID    = com.github.mantognini
 
 # The GENERATE_PUBLISHER_NAME tag identifies the documentation publisher.
 
@@ -1652,7 +1652,7 @@ DOT_FONTPATH           =
 # indirect inheritance relations. Setting this tag to YES will force the
 # CLASS_DIAGRAMS tag to NO.
 
-CLASS_GRAPH            = YES
+CLASS_GRAPH            = NO
 
 # If the COLLABORATION_GRAPH and HAVE_DOT tags are set to YES then doxygen
 # will generate a graph for each documented class showing the direct and
