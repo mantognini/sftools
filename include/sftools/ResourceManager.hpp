@@ -29,10 +29,10 @@
  You should include this file if you want to use a manager provided by sftools.
  */
 
-#ifndef __SFTOOLS_RESOURCEMANAGER__
-#define __SFTOOLS_RESOURCEMANAGER__
+#ifndef __SFTOOLS_BASE_RESOURCEMANAGER_HPP__
+#define __SFTOOLS_BASE_RESOURCEMANAGER_HPP__
 
 #include <sftools/ResourceManager/GenericManager.hpp>
 
-#endif // __SFTOOLS_RESOURCEMANAGER__
+#endif // __SFTOOLS_BASE_RESOURCEMANAGER_HPP__
 
