@@ -39,7 +39,7 @@ namespace sftools
     class NonInstanceable
     {
         NonInstanceable(); //!< Private constructor to prevent instanciations
-    }
+    };
 }
 
 #endif // __SFTOOLS_NONINSTANCEABLE_HPP__
