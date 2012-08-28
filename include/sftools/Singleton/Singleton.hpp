@@ -30,6 +30,7 @@
 #ifndef __SFTOOLS_SINGLETON_HPP__
 #define __SFTOOLS_SINGLETON_HPP__
 
+#include <sftools/Common.hpp>
 
 /*!
  @namespace sftools
@@ -37,7 +38,7 @@
  */
 namespace sftools
 {
-    class Singleton
+    class Singleton : NonCopyable, NonInstanceable
     {
 
     };
