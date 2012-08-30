@@ -27,32 +27,11 @@
  @brief Implements Singleton tool
  */
  
+ 
  namespace sftools
  {
-    namespace priv
-    {
-        template <class T>
-        struct Unique
-        {
-            static T* instance;
-        };
-        
-        template <class T>
-        T* Unique<T>::instance = 0;
-        
-        template <class T>
-        struct DefaultNew
-        {
-            T* operator()() 
-            {
-                return new T();
-            }
-        };
-    }
-    
-    
-    template <typename T, typename C>
-    T& Singleton<T, C>::getInstance()
+    template <typename T, typename F>
+    T& Singleton<T, F>::getInstance()
     {
         if (!exists())
         {
@@ -62,23 +41,22 @@
         return *priv::Unique<T>::instance;
     }
     
-    template <typename T, typename C>
-    void Singleton<T, C>::create(bool force)
+    template <typename T, typename F>
+    void Singleton<T, F>::create(bool force, F const& ctor)
     {
         if (exists() && force)
         {
             destroy();
-            create(force);
+            create(force, ctor);
         }
         else
         {
-            C ctor;
             priv::Unique<T>::instance = ctor();
         }
     }
     
-    template <typename T, typename C>
-    void Singleton<T, C>::destroy()
+    template <typename T, typename F>
+    void Singleton<T, F>::destroy()
     {
         if (exists())
         {
@@ -87,8 +65,8 @@
         }
     }
     
-    template <typename T, typename C>
-    bool Singleton<T, C>::exists()
+    template <typename T, typename F>
+    bool Singleton<T, F>::exists()
     {
         return priv::Unique<T>::instance != 0;
     }
