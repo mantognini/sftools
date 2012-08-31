@@ -33,6 +33,7 @@
 #define __SFTOOLS_BASE_RESOURCEMANAGER_HPP__
 
 #include <sftools/ResourceManager/GenericManager.hpp>
+#include <sftools/ResourceManager/SFMLManagers.hpp>
 
 #endif // __SFTOOLS_BASE_RESOURCEMANAGER_HPP__
 
