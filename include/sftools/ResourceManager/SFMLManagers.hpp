@@ -49,14 +49,42 @@ namespace sftools
      */
     namespace loader
     {
+        /*!
+         @class sftools::loader::TextureLoaderFromFile
+         @brief TODO
+         */
         typedef loader::LoadFromFile<sf::Texture> TextureLoaderFromFile;
+
+        /*!
+         @class sftools::loader::FontLoaderFromFile
+         @brief TODO
+         */
         typedef loader::LoadFromFile<sf::Font>    FontLoaderFromFile;
-        typedef loader::OpenFromFile<sf::Music>   MusicLoaderFromFile;
+
+        /*!
+         @class sftools::loader::MusicOpenerFromFile
+         @brief TODO
+         */
+        typedef loader::OpenFromFile<sf::Music>   MusicOpenerFromFile;
     }
 
+    /*!
+     @class sftools::TextureManager
+     @brief TODO
+     */
     typedef sftools::GenericManager<sf::Texture, std::string, loader::TextureLoaderFromFile> TextureManager;
+    
+    /*!
+     @class sftools::FontManager
+     @brief TODO
+     */
     typedef sftools::GenericManager<sf::Font,    std::string, loader::FontLoaderFromFile>    FontManager;
-    typedef sftools::GenericManager<sf::Music,   std::string, loader::MusicLoaderFromFile>   MusicManager;
+
+    /*!
+     @class sftools::MusicManager
+     @brief TODO
+     */
+    typedef sftools::GenericManager<sf::Music,   std::string, loader::MusicOpenerFromFile>   MusicManager;
 
     /*!
      @namespace sftools::singleton
@@ -64,8 +92,23 @@ namespace sftools
      */
     namespace singleton
     {
+
+        /*!
+         @class sftools::singleton::TextureManager
+         @brief TODO
+         */
         typedef sftools::Singleton<TextureManager> TextureManager;
+
+        /*!
+         @class sftools::singleton::FontManager
+         @brief TODO
+         */
         typedef sftools::Singleton<FontManager>    FontManager;
+
+        /*!
+         @class sftools::singleton::MusicManager
+         @brief TODO
+         */
         typedef sftools::Singleton<MusicManager>   MusicManager;
     }
 }
