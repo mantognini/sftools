@@ -75,7 +75,7 @@ namespace sftools
 
          If `path` was not previously added nothing is done.
          
-         @note This method invalid any iterator.
+         @note This method invalids any iterator.
 
          @param path location to be removed
          */
@@ -91,7 +91,7 @@ namespace sftools
         /*!
          @brief Remove all locations
          
-         @note This method invalid any iterator.
+         @note This method invalids any iterator.
          */
         void clear()
         {
@@ -128,7 +128,7 @@ namespace sftools
     namespace singleton
     {
         /*!
-         @class ResourceLocations
+         @class sftools::singleton::ResourceLocations
          @brief Singleton Locations object used my sftools resource managers.
 
          Locations stored in this singleton object are used to find and
