@@ -23,7 +23,7 @@
  */
 
 /*!
- @file Loaders.hpp
+ @file sftools/ResourceManager/Loaders.hpp
  @brief Defines Locations class and ResourceLocations singleton object
  */
 

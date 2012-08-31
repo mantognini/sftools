@@ -23,7 +23,7 @@
  */
 
 /*!
- @file GenericManager.hpp
+ @file sftools/ResourceManager/GenericManager.hpp
  @brief Defines GenericManager class
  */
 

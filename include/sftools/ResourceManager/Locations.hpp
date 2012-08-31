@@ -23,7 +23,7 @@
  */
 
 /*!
- @file Locations.hpp
+ @file sftools/ResourceManager/Locations.hpp
  @brief Defines Locations class and ResourceLocations singleton object
  */
 

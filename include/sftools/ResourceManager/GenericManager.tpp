@@ -23,7 +23,7 @@
  */
 
 /*!
- @file GenericManager.tpp
+ @file sftools/ResourceManager/GenericManager.tpp
  @brief Implementation of GenericManager class
  */
 
