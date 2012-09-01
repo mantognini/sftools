@@ -45,11 +45,25 @@ namespace sftools
 {
     /*!
      @class Locations
-     @brief TODO
+     @brief Minimalist locations manager
+     
+     Basically it's a collection of paths. ResourceLocations makes something
+     useful from it.
+     
+     @note When use add() to, well, add a location be careful and check if the
+           path ends with `/` or not. Here is the difference :
+           - If $path ends with a slash then ResourceLoader will look into the
+             folder named $path;
+           - Otherwise it will look for files with a prefix of "$path" 
+             (e.g. if $path is "high_definition_" implies that load("foo") will
+             load "hight_definition_foo" files).
 
-     @todo explain difference between "path" and "path/"
+     @todo It could be interesting to have a `Path` class and be able to
+           do something like
+           `Locations loc; loc.add({"res"}.add({"img"}, {"snd"}), {"extra"})`.
 
      @see ResourceLocations
+     @see ResourceLoader
      */
     class Locations : sftools::NonCopyable
     {
@@ -128,7 +142,7 @@ namespace sftools
     namespace singleton
     {
         /*!
-         @class sftools::singleton::ResourceLocations
+         @typedef sftools::singleton::ResourceLocations
          @brief Singleton Locations object used my sftools resource managers.
 
          Locations stored in this singleton object are used to find and

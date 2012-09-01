@@ -26,7 +26,7 @@
  @file sftools/ResourceManager/SFMLManagers.hpp
  @brief Defines a few managers for SFML resources
  
- @todo document this file
+ @todo add other SFML resource managers (sf::Sound, sf::SoundBuffer, sf::Image)
  */
 
 #ifndef __SFTOOLS_SFMLMANAGERS_HPP__
@@ -50,41 +50,50 @@ namespace sftools
     namespace loader
     {
         /*!
-         @class sftools::loader::TextureLoaderFromFile
-         @brief TODO
+         @typedef sftools::loader::TextureLoaderFromFile
+         @brief Load sf::Texture from file
          */
         typedef loader::LoadFromFile<sf::Texture> TextureLoaderFromFile;
 
         /*!
-         @class sftools::loader::FontLoaderFromFile
-         @brief TODO
+         @typedef sftools::loader::FontLoaderFromFile
+         @brief Load sf::Font from file
          */
         typedef loader::LoadFromFile<sf::Font>    FontLoaderFromFile;
 
         /*!
-         @class sftools::loader::MusicOpenerFromFile
-         @brief TODO
+         @typedef sftools::loader::MusicOpenerFromFile
+         @brief Open sf::Music from file
          */
         typedef loader::OpenFromFile<sf::Music>   MusicOpenerFromFile;
     }
 
     /*!
-     @class sftools::TextureManager
-     @brief TODO
+     @typedef sftools::TextureManager
+     @brief A manager type for sf::Texture
      */
-    typedef sftools::GenericManager<sf::Texture, std::string, loader::TextureLoaderFromFile> TextureManager;
+    typedef sftools::GenericManager<sf::Texture,
+                                    std::string,
+                                    loader::TextureLoaderFromFile>
+            TextureManager;
     
     /*!
-     @class sftools::FontManager
-     @brief TODO
+     @typedef sftools::FontManager
+     @brief A manager type for sf::Font
      */
-    typedef sftools::GenericManager<sf::Font,    std::string, loader::FontLoaderFromFile>    FontManager;
+    typedef sftools::GenericManager<sf::Font,
+                                    std::string,
+                                    loader::FontLoaderFromFile>
+            FontManager;
 
     /*!
-     @class sftools::MusicManager
-     @brief TODO
+     @typedef sftools::MusicManager
+     @brief A manager type for sf::Music
      */
-    typedef sftools::GenericManager<sf::Music,   std::string, loader::MusicOpenerFromFile>   MusicManager;
+    typedef sftools::GenericManager<sf::Music,
+                                    std::string,
+                                    loader::MusicOpenerFromFile>
+            MusicManager;
 
     /*!
      @namespace sftools::singleton
@@ -94,20 +103,20 @@ namespace sftools
     {
 
         /*!
-         @class sftools::singleton::TextureManager
-         @brief TODO
+         @typedef sftools::singleton::TextureManager
+         @brief A singleton manager for sf::Texture
          */
         typedef sftools::Singleton<TextureManager> TextureManager;
 
         /*!
-         @class sftools::singleton::FontManager
-         @brief TODO
+         @typedef sftools::singleton::FontManager
+         @brief A singleton manager for sf::Font
          */
         typedef sftools::Singleton<FontManager>    FontManager;
 
         /*!
-         @class sftools::singleton::MusicManager
-         @brief TODO
+         @typedef sftools::singleton::MusicManager
+         @brief A singleton manager for sf::Music
          */
         typedef sftools::Singleton<MusicManager>   MusicManager;
     }

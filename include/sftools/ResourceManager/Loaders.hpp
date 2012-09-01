@@ -49,7 +49,7 @@ namespace sftools
          @brief Generic resource loader
          
          It's primary use is to help the GenericManager.
-         This generic loader must be specialized by implementing load.
+         This generic loader must be specialized by implementing load().
          
          @tparam R Resource type
          
@@ -69,12 +69,13 @@ namespace sftools
             }
             
             /*!
-             @brief TODO
+             @brief Load operator
              
-             @todo doc
+             It create a resource and use load() to initialize its content.
              
              @param id Resource id to load
-             @return TODO
+             @return a pointer to a valid R object if load() succeed or 0 if it
+                     failed
              */
             R* operator()(std::string const& id)
             {
@@ -83,7 +84,9 @@ namespace sftools
                 Locations& locs = singleton::ResourceLocations::getInstance();
 
                 // Find the first location that holds an file called "id"
-                for (Locations::ConstIterator it = locs.begin(); it != locs.end(); ++it)
+                for (Locations::ConstIterator it = locs.begin();
+                     it != locs.end();
+                     ++it)
                 {
                     if (load(*ptr, *it + id))
                     {
@@ -91,26 +94,28 @@ namespace sftools
                     }
                 }
 
-                // Hum... got here ? This means the resource was not loaded properly.
+                // Hum... got here ?
+                // This means the resource was not loaded properly.
                 delete ptr;
                 ptr = 0;
                 return 0;
             }
 
             /*!
-             @brief TODO
+             @brief Load the content of a resource with the given file
              
-             @todo doc
+             @note subclasses must implement this function in order to 
+                   customize ResourceLoader.
              
-             @param res TODO
-             @param src TODO
-             @return TODO
+             @param res Resource to be feed with a new content
+             @param src File containing the new content to be loaded
+             @return true if loading the resource succeed; false otherwise
              */
             virtual bool load(R& res, std::string src) = 0;
         };
 
         /*!
-         @brief TODO
+         @brief Specialisation of ResourceLoader for `loadFromFile()`-resources
          
          @tparam R Resource type
          */
@@ -124,7 +129,7 @@ namespace sftools
         };
 
         /*!
-         @brief TODO
+         @brief Specialisation of ResourceLoader for `openFromFile()`-resources
 
          @tparam R Resource type
          */
