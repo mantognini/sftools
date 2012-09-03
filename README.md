@@ -18,4 +18,4 @@ This module provides :
 * a fully generic manager that can be subclassed to generate customs managers like :
 * a font (`sf::Font`) manager;
 * an image (`sf::Image`) and texture (`sf::Texture`) managers;
-* a sound buffer (`sf::SoundBuffer`), sound (`sf::Sound`) and music (`sf::Music`) managers;
+* a sound buffer (`sf::SoundBuffer`) and music (`sf::Music`) managers;
