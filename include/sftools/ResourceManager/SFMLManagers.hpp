@@ -25,8 +25,6 @@
 /*!
  @file sftools/ResourceManager/SFMLManagers.hpp
  @brief Defines a few managers for SFML resources
- 
- @todo add other SFML resource managers (sf::Sound, sf::SoundBuffer, sf::Image)
  */
 
 #ifndef __SFTOOLS_SFMLMANAGERS_HPP__
@@ -34,8 +32,16 @@
 
 #include <sftools/ResourceManager/Loaders.hpp>
 #include <SFML/Graphics/Texture.hpp>
+#include <SFML/Graphics/Image.hpp>
 #include <SFML/Graphics/Font.hpp>
-#include <SFML/Audio/Music.hpp>
+
+// SFML's audio module is not always used. We don't want the user to be forced
+// to link against sfml-audio if he doesn't use it.
+#ifndef SFTOOLS_NO_AUDIO
+    #include <SFML/Audio/Sound.hpp>
+    #include <SFML/Audio/SoundBuffer.hpp>
+    #include <SFML/Audio/Music.hpp>
+#endif
 
 /*!
  @namespace sftools
@@ -56,16 +62,32 @@ namespace sftools
         typedef loader::LoadFromFile<sf::Texture> TextureLoaderFromFile;
 
         /*!
+         @typedef sftools::loader::ImageLoaderFromFile
+         @brief Load sf::Image from file
+         */
+        typedef loader::LoadFromFile<sf::Image> ImageLoaderFromFile;
+
+        /*!
          @typedef sftools::loader::FontLoaderFromFile
          @brief Load sf::Font from file
          */
-        typedef loader::LoadFromFile<sf::Font>    FontLoaderFromFile;
+        typedef loader::LoadFromFile<sf::Font> FontLoaderFromFile;
+        
+#ifndef SFTOOLS_NO_AUDIO
+
+        /*!
+         @typedef sftools::loader::SoundBufferLoaderFromFile
+         @brief Load sf::SoundBuffer from file
+         */
+        typedef loader::LoadFromFile<sf::SoundBuffer> SoundBufferLoaderFromFile;
 
         /*!
          @typedef sftools::loader::MusicOpenerFromFile
          @brief Open sf::Music from file
          */
-        typedef loader::OpenFromFile<sf::Music>   MusicOpenerFromFile;
+        typedef loader::OpenFromFile<sf::Music> MusicOpenerFromFile;
+        
+#endif
     }
 
     /*!
@@ -76,6 +98,15 @@ namespace sftools
                                     std::string,
                                     loader::TextureLoaderFromFile>
             TextureManager;
+
+    /*!
+     @typedef sftools::ImageManager
+     @brief A manager type for sf::Image
+     */
+    typedef sftools::GenericManager<sf::Image,
+                                    std::string,
+                                    loader::ImageLoaderFromFile>
+            ImageManager;
     
     /*!
      @typedef sftools::FontManager
@@ -86,6 +117,17 @@ namespace sftools
                                     loader::FontLoaderFromFile>
             FontManager;
 
+#ifndef SFTOOLS_NO_AUDIO
+    
+    /*!
+     @typedef sftools::SoundBufferManager
+     @brief A manager type for sf::SoundBuffer
+     */
+    typedef sftools::GenericManager<sf::SoundBuffer,
+                                    std::string,
+                                    loader::SoundBufferLoaderFromFile>
+            SoundBufferManager;
+
     /*!
      @typedef sftools::MusicManager
      @brief A manager type for sf::Music
@@ -95,30 +137,47 @@ namespace sftools
                                     loader::MusicOpenerFromFile>
             MusicManager;
 
+#endif
+
     /*!
      @namespace sftools::singleton
      @brief Contains singleton object typedefs
      */
     namespace singleton
     {
-
         /*!
          @typedef sftools::singleton::TextureManager
          @brief A singleton manager for sf::Texture
          */
         typedef sftools::Singleton<TextureManager> TextureManager;
+        
+        /*!
+         @typedef sftools::singleton::ImageManager
+         @brief A singleton manager for sf::Image
+         */
+        typedef sftools::Singleton<ImageManager> ImageManager;
 
         /*!
          @typedef sftools::singleton::FontManager
          @brief A singleton manager for sf::Font
          */
-        typedef sftools::Singleton<FontManager>    FontManager;
+        typedef sftools::Singleton<FontManager> FontManager;
+
+#ifndef SFTOOLS_NO_AUDIO
+
+        /*!
+         @typedef sftools::singleton::SoundBufferManager
+         @brief A singleton manager for sf::SoundBuffer
+         */
+        typedef sftools::Singleton<SoundBufferManager> SoundBufferManager;
 
         /*!
          @typedef sftools::singleton::MusicManager
          @brief A singleton manager for sf::Music
          */
-        typedef sftools::Singleton<MusicManager>   MusicManager;
+        typedef sftools::Singleton<MusicManager> MusicManager;
+
+#endif
     }
 }
 
