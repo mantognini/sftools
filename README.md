@@ -19,3 +19,11 @@ This module provides :
 * a font (`sf::Font`) manager;
 * an image (`sf::Image`) and texture (`sf::Texture`) managers;
 * a sound buffer (`sf::SoundBuffer`) and music (`sf::Music`) managers;
+
+
+Chronometer
+-----------
+
+This class provides the basic mechanism of a chronometer. This class was previously called `PausableClock`.
+
+
