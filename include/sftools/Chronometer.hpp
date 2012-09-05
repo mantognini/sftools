@@ -23,23 +23,23 @@
  */
 
 /*!
- @file sftools/PausableClock.hpp
- @brief Defines PausableClock
+ @file sftools/Chronometer.hpp
+ @brief Defines Chronometer
  
  @todo write doc
  */
 
-#ifndef __SFTOOLS_BASE_PAUSABLECLOCK_HPP__
-#define __SFTOOLS_BASE_PAUSABLECLOCK_HPP__
+#ifndef __SFTOOLS_BASE_CHRONOMETER_HPP__
+#define __SFTOOLS_BASE_CHRONOMETER_HPP__
 
 #include <SFML/System/Clock.hpp>
 
 namespace sftools
 {
-    class PausableClock
+    class Chronometer
     {
     public:
-        PausableClock()
+        Chronometer()
         {
             reset();
         }
@@ -116,4 +116,4 @@ namespace sftools
 }
 
 
-#endif // __SFTOOLS_BASE_PAUSABLECLOCK_HPP__
+#endif // __SFTOOLS_BASE_CHRONOMETER_HPP__
