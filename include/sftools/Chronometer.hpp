@@ -34,16 +34,33 @@
 
 #include <SFML/System/Clock.hpp>
 
+/*!
+ @namespace sftools
+ @brief Simple and Fast Tools
+ */
 namespace sftools
 {
+    /*!
+     @class Chronometer
+     @brief Provide functionalities of a chronometer, aka stop watch
+     */
     class Chronometer
     {
     public:
+        /*!
+         @brief Constructor
+         */
         Chronometer()
         {
             reset();
         }
 
+        /*!
+         @brief Reset the chronometer
+         
+         @param start if true the chronometer automatically starts
+         @return Time elapsed on the chronometer before the reset
+         */
         sf::Time reset(bool start = false)
         {
             sf::Time time = getElapsedTime();
@@ -56,6 +73,13 @@ namespace sftools
             return time;
         }
 
+        /*!
+         @brief Pause the chronometer
+         
+         @return Time elapsed until now
+
+         @see toggle
+         */
         sf::Time pause()
         {
             if (isRunning())
@@ -66,6 +90,13 @@ namespace sftools
             return getElapsedTime();
         }
 
+        /*!
+         @brief Resume the chronometer
+         
+         @return Time elapsed
+         
+         @see toggle
+         */
         sf::Time resume()
         {
             if (!isRunning())
@@ -76,6 +107,17 @@ namespace sftools
             return getElapsedTime();
         }
 
+        /*!
+         @brief Pause or resume the chronometer
+         
+         If the chronometer is running the it is paused;
+         otherwise it is resumes.
+         
+         @return Time elapsed
+
+         @see pause
+         @see resume
+         */
         sf::Time toggle()
         {
             if (isRunning())    pause();
@@ -84,11 +126,21 @@ namespace sftools
             return getElapsedTime();
         }
 
+        /*!
+         @brief Tell the chronometer is running or not
+
+         @brief chronometer's status
+         */
         bool isRunning() const
         {
             return m_state == RUNNING;
         }
 
+        /*!
+         @brief Give the amount of time elapsed since the chronometer was started
+         
+         @return Time elapsed
+         */
         sf::Time getElapsedTime() const
         {
             switch (m_state) {
@@ -103,15 +155,22 @@ namespace sftools
             }
         }
 
+        /*!
+         @brief Implicit conversion to sf::Time
+
+         @return Time elapsed
+         
+         @see getElapsedTime
+         */
         operator sf::Time() const
         {
             return getElapsedTime();
         }
 
     private:
-        enum { STOPPED, RUNNING, PAUSED } m_state;
-        sf::Time m_time;
-        sf::Clock m_clock;
+        enum { STOPPED, RUNNING, PAUSED } m_state;  //!< internal state
+        sf::Time m_time;                            //!< internal time counter
+        sf::Clock m_clock;                          //!< internal clock
     };
 }
 
