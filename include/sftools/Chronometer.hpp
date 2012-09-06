@@ -49,10 +49,26 @@ namespace sftools
     public:
         /*!
          @brief Constructor
+         
+         @param initialTime Initial time elapsed
          */
-        Chronometer()
+        Chronometer(sf::Time initialTime = sf::Time::Zero)
         {
             reset();
+            add(initialTime);
+        }
+
+        /*!
+         @brief Add some time
+         
+         @param time Time to be added to the time elapsed
+         @return Time elapsed
+         */
+        sf::Time add(sf::Time time)
+        {
+            m_time += time;
+
+            return getElapsedTime();
         }
 
         /*!
