@@ -49,10 +49,26 @@ namespace sftools
     public:
         /*!
          @brief Constructor
+         
+         @param initialTime Initial time elapsed
          */
-        Chronometer()
+        Chronometer(sf::Time initialTime = sf::Time::Zero)
         {
             reset();
+            add(initialTime);
+        }
+
+        /*!
+         @brief Add some time
+         
+         @param time Time to be added to the time elapsed
+         @return Time elapsed
+         */
+        sf::Time add(sf::Time time)
+        {
+            m_time += time;
+
+            return getElapsedTime();
         }
 
         /*!
@@ -76,7 +92,7 @@ namespace sftools
         /*!
          @brief Pause the chronometer
          
-         @return Time elapsed until now
+         @return Time elapsed
 
          @see toggle
          */
@@ -168,9 +184,9 @@ namespace sftools
         }
 
     private:
-        enum { STOPPED, RUNNING, PAUSED } m_state;  //!< internal state
-        sf::Time m_time;                            //!< internal time counter
-        sf::Clock m_clock;                          //!< internal clock
+        enum { STOPPED, RUNNING, PAUSED } m_state;  //!< state
+        sf::Time m_time;                            //!< time counter
+        sf::Clock m_clock;                          //!< clock
     };
 }
 
