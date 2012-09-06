@@ -92,7 +92,7 @@ namespace sftools
         /*!
          @brief Pause the chronometer
          
-         @return Time elapsed until now
+         @return Time elapsed
 
          @see toggle
          */
@@ -184,9 +184,9 @@ namespace sftools
         }
 
     private:
-        enum { STOPPED, RUNNING, PAUSED } m_state;  //!< internal state
-        sf::Time m_time;                            //!< internal time counter
-        sf::Clock m_clock;                          //!< internal clock
+        enum { STOPPED, RUNNING, PAUSED } m_state;  //!< state
+        sf::Time m_time;                            //!< time counter
+        sf::Clock m_clock;                          //!< clock
     };
 }
 
