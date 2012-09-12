@@ -68,6 +68,8 @@ namespace sftools
         {
             m_time += time;
 
+            if (m_state == STOPPED) m_state = PAUSED;
+
             return getElapsedTime();
         }
 
