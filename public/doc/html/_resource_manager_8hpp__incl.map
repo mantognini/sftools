@@ -1,0 +1,14 @@
+<map id="ResourceManager.hpp" name="ResourceManager.hpp">
+<area shape="rect" id="node3" href="$_generic_manager_8hpp.html" title="Defines GenericManager class." alt="" coords="742,270,914,314"/>
+<area shape="rect" id="node17" href="$_s_f_m_l_managers_8hpp.html" title="Defines a few managers for SFML resources." alt="" coords="545,83,717,127"/>
+<area shape="rect" id="node13" href="$_generic_manager_8tpp.html" title="Implementation of GenericManager class." alt="" coords="936,363,1108,407"/>
+<area shape="rect" id="node19" href="$_loaders_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="1238,177,1410,221"/>
+<area shape="rect" id="node21" href="$_locations_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="1238,270,1410,314"/>
+<area shape="rect" id="node23" href="$_non_copyable_8hpp.html" title="Defines the NonCopyable type." alt="" coords="1211,627,1438,655"/>
+<area shape="rect" id="node26" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="1362,371,1506,399"/>
+<area shape="rect" id="node28" href="$_singleton_2_singleton_8hpp.html" title="Defines Singleton tool." alt="" coords="1460,457,1664,485"/>
+<area shape="rect" id="node30" href="$_common_8hpp.html" title="Includes all the common data structure defined and used by sftools." alt="" coords="1587,542,1729,570"/>
+<area shape="rect" id="node35" href="$_singleton_priv_8hpp.html" title="Defines some tools used by Singleton&#39;s internal." alt="" coords="1754,534,1932,578"/>
+<area shape="rect" id="node37" href="$_singleton_8tpp.html" title="Implements Singleton tool." alt="" coords="1362,542,1562,570"/>
+<area shape="rect" id="node33" href="$_non_instanceable_8hpp.html" title="Defines the NonInstanceable type." alt="" coords="1535,627,1781,655"/>
+</map>

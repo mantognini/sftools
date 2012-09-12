@@ -1,0 +1,10 @@
+<map id="Loaders.hpp" name="Loaders.hpp">
+<area shape="rect" id="node3" href="$_locations_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="295,83,467,127"/>
+<area shape="rect" id="node5" href="$_non_copyable_8hpp.html" title="Defines the NonCopyable type." alt="" coords="5,425,232,453"/>
+<area shape="rect" id="node9" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="170,177,315,205"/>
+<area shape="rect" id="node11" href="$_singleton_2_singleton_8hpp.html" title="Defines Singleton tool." alt="" coords="234,254,437,282"/>
+<area shape="rect" id="node13" href="$_common_8hpp.html" title="Includes all the common data structure defined and used by sftools." alt="" coords="156,339,299,367"/>
+<area shape="rect" id="node18" href="$_singleton_priv_8hpp.html" title="Defines some tools used by Singleton&#39;s internal." alt="" coords="324,331,501,375"/>
+<area shape="rect" id="node20" href="$_singleton_8tpp.html" title="Implements Singleton tool." alt="" coords="526,339,727,367"/>
+<area shape="rect" id="node16" href="$_non_instanceable_8hpp.html" title="Defines the NonInstanceable type." alt="" coords="256,425,503,453"/>
+</map>
