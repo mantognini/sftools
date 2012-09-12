@@ -25,8 +25,6 @@
 /*!
  @file sftools/Chronometer.hpp
  @brief Defines Chronometer
- 
- @todo write doc
  */
 
 #ifndef __SFTOOLS_BASE_CHRONOMETER_HPP__
