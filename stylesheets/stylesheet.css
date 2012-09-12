@@ -374,6 +374,16 @@ footer a:hover {
 /* ========================================================================= */
 /* personal addition */
 
+ul {
+    font-weight: 300;
+}
+
 .warning {
     color: #DE6376;
+    font-weight: 900;
+}
+
+.todo {
+    color: #009999;
+    font-weight: 900;
 }
