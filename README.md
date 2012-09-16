@@ -27,3 +27,8 @@ Chronometer
 This class provides the basic mechanism of a chronometer. This class was previously called `PausableClock`.
 
 
+Animation
+---------
+
+`sftools` provides a set of class to render animation based on a sequence of frames. These classes are `Animation` which is a `sf::Drawable`, `Frame` which holds the data used to render one frame, and `FrameStream` that manages a sequence of frames.
+
