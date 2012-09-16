@@ -31,6 +31,7 @@
 #define __SFTOOLS_LOOPFRAMESTREAM_HPP__
 
 #include <SFML/System/Time.hpp>
+
 #include <sftools/Animation/FrameStream.hpp>
 
 #include <vector>

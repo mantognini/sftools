@@ -31,6 +31,7 @@
 #define __SFTOOLS_FRAMESTREAM_HPP__
 
 #include <SFML/System/Time.hpp>
+
 #include <sftools/Animation/Frame.hpp>
 
 namespace sftools

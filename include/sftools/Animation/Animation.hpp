@@ -32,6 +32,7 @@
 
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Transformable.hpp>
+
 #include <sftools/Animation/FrameStream.hpp>
 
 namespace sftools
