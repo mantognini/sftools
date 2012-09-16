@@ -35,19 +35,44 @@
 
 #include <sftools/Animation/FrameStream.hpp>
 
+/*!
+ @namespace sftools
+ @brief Simple and Fast Tools
+ */
 namespace sftools
 {
 
+    /*!
+     @class Animation
+     @brief Drawable capable of rendering an animation based on a stream of frames
+     
+     All sf::Transformable and sf::Drawable methods are publicly available.
+     
+     @see Frame
+     @see FrameStream
+     */
     class Animation : public sf::Drawable, public sf::Transformable
     {
     public:
+        /*!
+         @brief Constructor
+
+         @param stream frame stream
+         @param initialTime by default the animation start a time zero but 
+                an offset can bet given
+         */
         Animation(FrameStream const& stream, sf::Time initialTime = sf::Time::Zero)
         : m_stream(0)
         {
             setFrameStream(stream);
-            resetTime(initialTime);
+            restart(initialTime);
         }
-        
+
+        /*!
+         @brief Change the animation stream
+         
+         @param stream the new stream to use
+         */
         void setFrameStream(FrameStream const& stream)
         {
             m_stream = &stream;
@@ -55,20 +80,39 @@ namespace sftools
             updateRender();
         }
 
-        void resetTime(sf::Time initialTime = sf::Time::Zero)
+        /*!
+         @brief Restart the animation
+         
+         @param initialTime optional time offset
+         */
+        void restart(sf::Time initialTime = sf::Time::Zero)
         {
             m_timeElapsed = initialTime;
 
             updateRender();
         }
 
-        void update(sf::Time dt) // We don't use an internal clock so the user can apply some time speed factor
+        /*!
+         @brief Update the animation frame
+
+         @note the dt parameter is used to allow custom time handling very
+         easily : for example you can apply a factor on the elapsed time to
+         create bullet time effect.
+         
+         @param dt time elapsed since the last update
+         */
+        void update(sf::Time dt)
         {
             m_timeElapsed += dt;
             
             updateRender();
         }
 
+        /*!
+         @brief Implement sf::Drawable::draw() method
+         
+         Look at <a href="http://www.sfml-dev.org/documentation/2.0/classsf_1_1Drawable.php">SFML's documentation of sf::Drawable</a>.
+         */
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
         {
             // Note : if the stream was not set it will simply draw nothing, like a sprite without any texture
@@ -78,6 +122,11 @@ namespace sftools
         }
 
     private:
+        /*!
+         @brief Internal render updater
+         
+         Update our sprite
+         */
         void updateRender()
         {
             if (m_stream)
@@ -91,9 +140,9 @@ namespace sftools
         }
 
     private:
-        FrameStream const* m_stream;
-        sf::Time m_timeElapsed;
-        sf::Sprite m_sprite;
+        FrameStream const* m_stream; //!< frame stream for the animation
+        sf::Time m_timeElapsed; //!< current time position in the animation
+        sf::Sprite m_sprite; //!< internal renderer
     };
 
 }
