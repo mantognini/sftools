@@ -34,14 +34,41 @@
 
 #include <sftools/Animation/Frame.hpp>
 
+/*!
+ @namespace sftools
+ @brief Simple and Fast Tools
+ */
 namespace sftools
 {
-    
+    /*!
+     @class FrameStream
+     @brief Abstract class for animation frames stream management
+     
+     @see Frame
+     @see LoopFrameStream
+     @see Animation
+     */
     class FrameStream
     {
     public:
+        /*!
+         @brief Seek and fetch a frame at a given point in time
+         
+         Subclasses must implement this function in order to provide the
+         Animation class all the tools required to render the animation.
+         
+         @see LoopFrameStream::getFrameAt
+         
+         @param time time elapsed since the start of the animation
+         @return the frame for the given point in time
+         */
         virtual Frame getFrameAt(sf::Time time) const = 0;
 
+        /*!
+         @brief Virtual destructor
+         
+         Does nothing special. It's here for inheritance purposes.
+         */
         virtual ~FrameStream()
         {
             // No clean up

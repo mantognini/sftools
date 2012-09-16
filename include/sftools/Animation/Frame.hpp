@@ -50,6 +50,9 @@ namespace sftools
      @note Like sf::Sprite, Frame doesn't own the texture. You have to keep it
      'alive' for the lifetime of the frame that uses it, otherwise you'll get
      some undefined behaviour.
+     
+     @see FrameStream
+     @see Animation
      */
     struct Frame
     {
