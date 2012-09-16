@@ -3,6 +3,12 @@ sftools
 
 Bunch of tools for SFML 2.0 application development.
 
+It's a header-only library written in C++03 to keep maximum compatibility with most compilers.
+
+Have a look at [sftools' website](http://mantognini.github.com/sftools/) for downloads, installation instruction, documentation and tutorials.
+
+Here is a brief summary of the tools provided by `sftools`.
+
 
 Singleton
 ---------
