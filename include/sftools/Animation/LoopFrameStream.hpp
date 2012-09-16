@@ -38,18 +38,104 @@
 #include <algorithm>
 #include <stdexcept>
 
+/*!
+ @namespace sftools
+ @brief Simple and Fast Tools
+ */
 namespace sftools
 {
 
+    /*!
+     @brief Define a animation's frame stream based on a sprite sheet
+     
+     @note Like sf::Sprite, LoopFrameStream doesn't own the texture. 
+     You have to keep it 'alive' for the lifetime of the stream that uses it,
+     otherwise you'll get some undefined behaviour.
+     
+     @todo It could be usefull to provide a 'combine(LoopFrameStream)' method
+     to use more than one sprite sheet for an animation.
+     
+     @todo In the same vein a 'add(Frame)' or 'add(begin, end)' could be useful
+     too.
+     
+     @todo Does 'loop == false' means the animation should keep displaying the
+     last frame or display nothing at all when the last frame is reached ?
+     Currently the first solution is implemented but it might be more cleaver
+     to implement the second one. Or add a LoopPolicy..
+     
+     @see FrameStream
+     @see Animation
+     @see Frame
+     */
     class LoopFrameStream : public FrameStream
     {
     public:
-        enum HorizontalStartFromPolicy { FromLeft        = 0, FromRight     };
-        enum VerticalStartFromPolicy   { FromTop         = 0, FromBottom    };
-        enum PrecedencePolicy          { HorizontalFirst = 0, VerticalFirst };
-        
+        /*!
+         @enum HorizontalStartFromPolicy
+         @brief Define how a sprite sheet should be horitontally read.
+         
+         i.e. from left to right or from right to left ?
+         
+         @see LoopFrameStream::Settings
+         @see VerticalStartFromPolicy
+         @see PrecedencePolicy
+         */
+        enum HorizontalStartFromPolicy
+        {
+            FromLeft = 0, //!< Read the sprite sheet from left to right
+            FromRight     //!< Read the sprite sheet from right to left
+        };
+
+        /*!
+         @enum VerticalStartFromPolicy
+         @brief Define how a sprite sheet should be vertically read.
+         
+         i.e. from top to bottom or from bottom to top ?
+         
+         @see LoopFrameStream::Settings
+         @see HorizontalStartFromPolicy
+         @see PrecedencePolicy
+         */
+        enum VerticalStartFromPolicy
+        {
+            FromTop = 0, //!< Read the sprite sheet from top to bottom
+            FromBottom   //!< Read the sprite sheet from bottom to top
+        };
+
+        /*!
+         @enum PrecedencePolicy
+         @brief Define how a sprite sheet should be read.
+         
+         i.e. by row or by column ?
+
+         @see LoopFrameStream::Settings
+         @see VerticalStartFromPolicy
+         @see HorizontalStartFromPolicy
+         */
+        enum PrecedencePolicy
+        {
+            HorizontalFirst = 0, //!< Read the sprite sheet by row
+            VerticalFirst        //!< Read the sprite sheet by column
+        };
+
+        /*!
+         @struct Settings
+         @brief Combine horizontal, vertical and precedence policies together
+         to define how a sprite sheet should be read
+         
+         @see PrecedencePolicy
+         @see VerticalStartFromPolicy
+         @see HorizontalStartFromPolicy
+         */
         struct Settings
         {
+            /*!
+             @brief Constructor
+
+             @param horizontalPolicy tell which horizontal policy should be used
+             @param verticalPolicy tell which vertical policy should be used
+             @param precedencePolicy tell which precedence policy should be used
+             */
             Settings(HorizontalStartFromPolicy horizontalPolicy = FromLeft,
                      VerticalStartFromPolicy   verticalPolicy   = FromTop,
                      PrecedencePolicy          precedencePolicy = HorizontalFirst)
@@ -60,12 +146,20 @@ namespace sftools
                 // That's it
             }
 
-            HorizontalStartFromPolicy horizontalPolicy;
-            VerticalStartFromPolicy   verticalPolicy;
-            PrecedencePolicy          precedencePolicy;
+            HorizontalStartFromPolicy horizontalPolicy; //!< Tell which horizontal policy should be used
+            VerticalStartFromPolicy   verticalPolicy;   //!< Tell which vertical policy should be used
+            PrecedencePolicy          precedencePolicy; //!< Tell which precedence policy should be used
         };
         
     public:
+        /*!
+         @brief Default constructor
+         
+         Doesn't load any frame at all.
+         
+         @note You must call create() at least once before usign this stream in
+         an animation
+         */
         LoopFrameStream()
         : m_count(0)
         {
@@ -73,6 +167,11 @@ namespace sftools
             // because create will be called
         }
 
+        /*!
+         @brief Copy constructor
+         
+         @param stream object to copy
+         */
         LoopFrameStream(LoopFrameStream const& stream)
         : m_count(stream.m_count)
         , m_frameTime(stream.m_frameTime)
@@ -82,6 +181,23 @@ namespace sftools
             // That's it
         }
 
+        /*!
+         @brief Constructor
+         
+         Load a sprite sheet
+
+         @param texture sprite sheet
+         @param frameSize size of a frame
+         @param frameCount number of frame as a vector where x is the number of column and y is the number of row
+         @param frameTime time by frame
+         @param loop define if the animation should loop or stay on the last frame
+         @param settings settings used to read the sprite sheet
+         
+         @throw std::invalid_argument if the number of frame is zero
+         @throw std::invalid_argument if the frame time is zero
+
+         @see create()
+         */
         LoopFrameStream(sf::Texture const& texture,
                         sf::Vector2i frameSize,
                         sf::Vector2u frameCount,
@@ -92,6 +208,12 @@ namespace sftools
             create(texture, frameSize, frameCount, frameTime, loop, settings);
         }
 
+        /*!
+         @brief Copy assignment operator
+         
+         @param rhs stream to be copied
+         @return this stream
+         */
         LoopFrameStream& operator=(LoopFrameStream const& rhs)
         {
             m_count       = rhs.m_count;
@@ -102,6 +224,19 @@ namespace sftools
             return *this;
         }
 
+        /*!
+         @brief Load a sprite sheet
+
+         @param texture sprite sheet
+         @param frameSize size of a frame
+         @param frameCount number of frame as a vector where x is the number of column and y is the number of row
+         @param frameTime time by frame
+         @param loop define if the animation should loop or stay on the last frame
+         @param settings settings used to read the sprite sheet
+
+         @throw std::invalid_argument if the number of frame is zero
+         @throw std::invalid_argument if the frame time is zero
+         */
         void create(sf::Texture const& texture,
                     sf::Vector2i frameSize,
                     sf::Vector2u frameCount,
@@ -158,6 +293,18 @@ namespace sftools
             }
         }
 
+        /*!
+         @brief Seek and fetch a frame at a given point in time
+         
+         See FrameStream::getFrameAt() for more details.
+
+         @param time time elapsed since the start of the animation
+         @return the frame for the given point in time
+         
+         @throw std::runtime_error if the stream was not yet loaded
+         
+         @see FrameStream::getFrameAt()
+         */
         virtual Frame getFrameAt(sf::Time time) const
         {
             if (m_count == 0) throw std::runtime_error("the stream was not properly initialized");
@@ -172,12 +319,12 @@ namespace sftools
         
 	private:
         /* Setting variables */
-        unsigned int m_count;
-        sf::Time m_frameTime;
-        bool m_loop;
+        unsigned int m_count; //!< number of frames
+        sf::Time m_frameTime; //!< frame time
+        bool m_loop; //!< loop mode
 
         /* State */
-        std::vector<Frame> m_frames;
+        std::vector<Frame> m_frames; //!< set of frames
     };
 
 }

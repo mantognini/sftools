@@ -57,10 +57,10 @@ namespace sftools
          Subclasses must implement this function in order to provide the
          Animation class all the tools required to render the animation.
          
-         @see LoopFrameStream::getFrameAt
-         
          @param time time elapsed since the start of the animation
          @return the frame for the given point in time
+
+         @see LoopFrameStream::getFrameAt
          */
         virtual Frame getFrameAt(sf::Time time) const = 0;
 
