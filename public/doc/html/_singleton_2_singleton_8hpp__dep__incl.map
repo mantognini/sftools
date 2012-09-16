@@ -1,7 +1,12 @@
 <map id="Singleton.hpp" name="Singleton.hpp">
-<area shape="rect" id="node3" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="31,83,133,111"/>
-<area shape="rect" id="node5" href="$_locations_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="30,161,135,189"/>
-<area shape="rect" id="node7" href="$_loaders_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="35,238,129,266"/>
-<area shape="rect" id="node9" href="$_s_f_m_l_managers_8hpp.html" title="Defines a few managers for SFML resources." alt="" coords="12,315,153,343"/>
-<area shape="rect" id="node11" href="$_resource_manager_8hpp.html" title="Includes all the resource managers provided by sftools." alt="" coords="5,393,160,421"/>
+<area shape="rect" id="node3" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="243,83,345,111"/>
+<area shape="rect" id="node5" href="$_frame_8hpp.html" title="Define Frame class." alt="" coords="188,161,273,189"/>
+<area shape="rect" id="node16" href="$_locations_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="306,161,411,189"/>
+<area shape="rect" id="node7" href="$_frame_stream_8hpp.html" title="Define FrameStream abstract class." alt="" coords="149,238,277,266"/>
+<area shape="rect" id="node9" href="$_animation_2_animation_8hpp.html" title="Define Animation class." alt="" coords="4,315,109,343"/>
+<area shape="rect" id="node13" href="$_loop_frame_stream_8hpp.html" title="Define LoopFrameStream class." alt="" coords="134,315,292,343"/>
+<area shape="rect" id="node11" href="$_animation_8hpp.html" title="Include Animation tools." alt="" coords="81,393,187,421"/>
+<area shape="rect" id="node18" href="$_loaders_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="320,238,415,266"/>
+<area shape="rect" id="node20" href="$_s_f_m_l_managers_8hpp.html" title="Defines a few managers for SFML resources." alt="" coords="317,315,459,343"/>
+<area shape="rect" id="node22" href="$_resource_manager_8hpp.html" title="Includes all the resource managers provided by sftools." alt="" coords="310,393,465,421"/>
 </map>

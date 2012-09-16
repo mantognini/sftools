@@ -1,0 +1,9 @@
+<map id="Frame.hpp" name="Frame.hpp">
+<area shape="rect" id="node9" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="611,83,756,111"/>
+<area shape="rect" id="node11" href="$_singleton_2_singleton_8hpp.html" title="Defines Singleton tool." alt="" coords="582,161,785,189"/>
+<area shape="rect" id="node13" href="$_common_8hpp.html" title="Includes all the common data structure defined and used by sftools." alt="" coords="427,246,569,274"/>
+<area shape="rect" id="node21" href="$_singleton_priv_8hpp.html" title="Defines some tools used by Singleton&#39;s internal." alt="" coords="595,238,772,282"/>
+<area shape="rect" id="node23" href="$_singleton_8tpp.html" title="Implements Singleton tool." alt="" coords="797,246,997,274"/>
+<area shape="rect" id="node15" href="$_non_copyable_8hpp.html" title="Defines the NonCopyable type." alt="" coords="254,331,481,359"/>
+<area shape="rect" id="node19" href="$_non_instanceable_8hpp.html" title="Defines the NonInstanceable type." alt="" coords="506,331,752,359"/>
+</map>

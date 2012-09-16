@@ -1,0 +1,11 @@
+<map id="Animation.hpp" name="Animation.hpp">
+<area shape="rect" id="node7" href="$_frame_stream_8hpp.html" title="Define FrameStream abstract class." alt="" coords="483,83,716,111"/>
+<area shape="rect" id="node11" href="$_frame_8hpp.html" title="Define Frame class." alt="" coords="604,161,795,189"/>
+<area shape="rect" id="node19" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="910,238,1055,266"/>
+<area shape="rect" id="node21" href="$_singleton_2_singleton_8hpp.html" title="Defines Singleton tool." alt="" coords="880,315,1084,343"/>
+<area shape="rect" id="node23" href="$_common_8hpp.html" title="Includes all the common data structure defined and used by sftools." alt="" coords="726,401,868,429"/>
+<area shape="rect" id="node31" href="$_singleton_priv_8hpp.html" title="Defines some tools used by Singleton&#39;s internal." alt="" coords="893,393,1071,437"/>
+<area shape="rect" id="node33" href="$_singleton_8tpp.html" title="Implements Singleton tool." alt="" coords="1096,401,1296,429"/>
+<area shape="rect" id="node25" href="$_non_copyable_8hpp.html" title="Defines the NonCopyable type." alt="" coords="553,486,780,514"/>
+<area shape="rect" id="node29" href="$_non_instanceable_8hpp.html" title="Defines the NonInstanceable type." alt="" coords="804,486,1051,514"/>
+</map>

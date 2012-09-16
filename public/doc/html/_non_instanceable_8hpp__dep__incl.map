@@ -1,9 +1,14 @@
 <map id="NonInstanceable.hpp" name="NonInstanceable.hpp">
-<area shape="rect" id="node3" href="$_common_8hpp.html" title="Includes all the common data structure defined and used by sftools." alt="" coords="32,83,133,111"/>
-<area shape="rect" id="node5" href="$_singleton_2_singleton_8hpp.html" title="Defines Singleton tool." alt="" coords="31,161,133,189"/>
-<area shape="rect" id="node7" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="31,238,133,266"/>
-<area shape="rect" id="node9" href="$_locations_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="30,315,135,343"/>
-<area shape="rect" id="node11" href="$_loaders_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="35,393,129,421"/>
-<area shape="rect" id="node13" href="$_s_f_m_l_managers_8hpp.html" title="Defines a few managers for SFML resources." alt="" coords="12,470,153,498"/>
-<area shape="rect" id="node15" href="$_resource_manager_8hpp.html" title="Includes all the resource managers provided by sftools." alt="" coords="5,547,160,575"/>
+<area shape="rect" id="node3" href="$_common_8hpp.html" title="Includes all the common data structure defined and used by sftools." alt="" coords="244,83,345,111"/>
+<area shape="rect" id="node5" href="$_singleton_2_singleton_8hpp.html" title="Defines Singleton tool." alt="" coords="243,161,345,189"/>
+<area shape="rect" id="node7" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="243,238,345,266"/>
+<area shape="rect" id="node9" href="$_frame_8hpp.html" title="Define Frame class." alt="" coords="188,315,273,343"/>
+<area shape="rect" id="node20" href="$_locations_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="306,315,411,343"/>
+<area shape="rect" id="node11" href="$_frame_stream_8hpp.html" title="Define FrameStream abstract class." alt="" coords="149,393,277,421"/>
+<area shape="rect" id="node13" href="$_animation_2_animation_8hpp.html" title="Define Animation class." alt="" coords="4,470,109,498"/>
+<area shape="rect" id="node17" href="$_loop_frame_stream_8hpp.html" title="Define LoopFrameStream class." alt="" coords="134,470,292,498"/>
+<area shape="rect" id="node15" href="$_animation_8hpp.html" title="Include Animation tools." alt="" coords="81,547,187,575"/>
+<area shape="rect" id="node22" href="$_loaders_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="320,393,415,421"/>
+<area shape="rect" id="node24" href="$_s_f_m_l_managers_8hpp.html" title="Defines a few managers for SFML resources." alt="" coords="317,470,459,498"/>
+<area shape="rect" id="node26" href="$_resource_manager_8hpp.html" title="Includes all the resource managers provided by sftools." alt="" coords="310,547,465,575"/>
 </map>

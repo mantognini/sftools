@@ -1,10 +1,12 @@
 <map id="sftools" name="sftools">
-<area shape="rect" id="node5" href="dir_c2ad7b91e26f6ef61b82038cf71d6a48.html" title="ResourceManager" alt="" coords="37,160,168,208"/>
-<area shape="rect" id="edge6-headlabel" href="dir_000001_000002.html" title="2" alt="" coords="132,142,139,158"/>
-<area shape="rect" id="node6" href="dir_1b25f641cf1c4dc24b02c5dc18103297.html" title="Singleton" alt="" coords="192,160,268,208"/>
-<area shape="rect" id="edge8-headlabel" href="dir_000001_000004.html" title="1" alt="" coords="208,132,215,148"/>
-<area shape="rect" id="node4" href="dir_ddfcc325f20aaac55c85f8a64972342c.html" title="Common" alt="" coords="65,256,140,304"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000002_000003.html" title="1" alt="" coords="107,230,115,246"/>
-<area shape="rect" id="graph3" href="dir_e4c0ae14235a9112ed7fd76b18f36570.html" alt="" coords="27,53,280,315"/>
-<area shape="rect" id="graph2" href="dir_043810ac2e1709b683c9c189ac7f5328.html" title="include" alt="" coords="16,16,291,325"/>
+<area shape="rect" id="node4" href="dir_07f1cdf3597034cf77b20b1e347d4ba7.html" title="Animation" alt="" coords="37,160,117,208"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000001_000002.html" title="2" alt="" coords="125,148,132,164"/>
+<area shape="rect" id="node6" href="dir_c2ad7b91e26f6ef61b82038cf71d6a48.html" title="ResourceManager" alt="" coords="141,160,272,208"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000001_000003.html" title="2" alt="" coords="211,134,219,150"/>
+<area shape="rect" id="node7" href="dir_1b25f641cf1c4dc24b02c5dc18103297.html" title="Singleton" alt="" coords="296,160,372,208"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000001_000005.html" title="1" alt="" coords="290,134,297,150"/>
+<area shape="rect" id="node5" href="dir_ddfcc325f20aaac55c85f8a64972342c.html" title="Common" alt="" coords="169,256,244,304"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000003_000004.html" title="1" alt="" coords="211,230,219,246"/>
+<area shape="rect" id="graph3" href="dir_e4c0ae14235a9112ed7fd76b18f36570.html" alt="" coords="27,53,384,315"/>
+<area shape="rect" id="graph2" href="dir_043810ac2e1709b683c9c189ac7f5328.html" title="include" alt="" coords="16,16,395,325"/>
 </map>

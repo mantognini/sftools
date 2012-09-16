@@ -1,6 +1,11 @@
 <map id="Singleton.hpp" name="Singleton.hpp">
-<area shape="rect" id="node3" href="$_locations_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="30,83,135,111"/>
-<area shape="rect" id="node5" href="$_loaders_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="35,161,129,189"/>
-<area shape="rect" id="node7" href="$_s_f_m_l_managers_8hpp.html" title="Defines a few managers for SFML resources." alt="" coords="12,238,153,266"/>
-<area shape="rect" id="node9" href="$_resource_manager_8hpp.html" title="Includes all the resource managers provided by sftools." alt="" coords="5,315,160,343"/>
+<area shape="rect" id="node3" href="$_frame_8hpp.html" title="Define Frame class." alt="" coords="188,83,273,111"/>
+<area shape="rect" id="node14" href="$_locations_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="306,83,411,111"/>
+<area shape="rect" id="node5" href="$_frame_stream_8hpp.html" title="Define FrameStream abstract class." alt="" coords="149,161,277,189"/>
+<area shape="rect" id="node7" href="$_animation_2_animation_8hpp.html" title="Define Animation class." alt="" coords="4,238,109,266"/>
+<area shape="rect" id="node11" href="$_loop_frame_stream_8hpp.html" title="Define LoopFrameStream class." alt="" coords="134,238,292,266"/>
+<area shape="rect" id="node9" href="$_animation_8hpp.html" title="Include Animation tools." alt="" coords="81,315,187,343"/>
+<area shape="rect" id="node16" href="$_loaders_8hpp.html" title="Defines Locations class and ResourceLocations singleton object." alt="" coords="320,161,415,189"/>
+<area shape="rect" id="node18" href="$_s_f_m_l_managers_8hpp.html" title="Defines a few managers for SFML resources." alt="" coords="317,238,459,266"/>
+<area shape="rect" id="node20" href="$_resource_manager_8hpp.html" title="Includes all the resource managers provided by sftools." alt="" coords="310,315,465,343"/>
 </map>

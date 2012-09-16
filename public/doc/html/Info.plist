@@ -8,7 +8,7 @@
      <key>CFBundleIdentifier</key>
      <string>com.github.mantognini.sftools</string>
      <key>CFBundleVersion</key>
-     <string>2.0</string>
+     <string>2.0 dev</string>
      <key>DocSetFeedName</key>
      <string>sftools documentation</string>
      <key>DocSetPublisherIdentifier</key>

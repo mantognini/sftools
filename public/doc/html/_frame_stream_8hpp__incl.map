@@ -1,0 +1,10 @@
+<map id="FrameStream.hpp" name="FrameStream.hpp">
+<area shape="rect" id="node5" href="$_frame_8hpp.html" title="Define Frame class." alt="" coords="306,83,496,111"/>
+<area shape="rect" id="node13" href="$_singleton_8hpp.html" title="Includes Singleton tool." alt="" coords="611,161,756,189"/>
+<area shape="rect" id="node15" href="$_singleton_2_singleton_8hpp.html" title="Defines Singleton tool." alt="" coords="582,238,785,266"/>
+<area shape="rect" id="node17" href="$_common_8hpp.html" title="Includes all the common data structure defined and used by sftools." alt="" coords="427,323,569,351"/>
+<area shape="rect" id="node25" href="$_singleton_priv_8hpp.html" title="Defines some tools used by Singleton&#39;s internal." alt="" coords="595,315,772,359"/>
+<area shape="rect" id="node27" href="$_singleton_8tpp.html" title="Implements Singleton tool." alt="" coords="797,323,997,351"/>
+<area shape="rect" id="node19" href="$_non_copyable_8hpp.html" title="Defines the NonCopyable type." alt="" coords="254,409,481,437"/>
+<area shape="rect" id="node23" href="$_non_instanceable_8hpp.html" title="Defines the NonInstanceable type." alt="" coords="506,409,752,437"/>
+</map>

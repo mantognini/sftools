@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node3" href="$classsftools_1_1_generic_manager.html" title="A generic resource manager ready to be customized." alt="" coords="222,5,397,49"/>
+<area shape="rect" id="node5" href="$classsftools_1_1_locations.html" title="Minimalist locations manager." alt="" coords="247,73,372,101"/>
+<area shape="rect" id="node7" href="$classsftools_1_1_singleton.html" title="Non intruisive and customizable singleton system." alt="" coords="248,125,371,169"/>
+<area shape="rect" id="node8" href="$classsftools_1_1_non_instanceable.html" title="Defines a type that can not be instanciated." alt="" coords="6,133,173,161"/>
+</map>
