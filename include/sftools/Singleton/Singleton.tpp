@@ -1,6 +1,6 @@
 /*
 
- sftools - Copyright (c) 2012 Macro Antognini
+ sftools - Copyright (c) 2012 Macro Antognini <antognini.marco@gmai.com>
 
  This software is provided 'as-is', without any express or implied warranty. In
  no event will the authors be held liable for any damages arising from the use
