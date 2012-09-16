@@ -22,6 +22,11 @@
 
  */
 
+/*!
+ @file sftools/Animation.hpp
+ @brief Include Animation tools
+ */
+
 #ifndef __SFTOOLS_BASE_ANIMATION_HPP__
 #define __SFTOOLS_BASE_ANIMATION_HPP__
 
