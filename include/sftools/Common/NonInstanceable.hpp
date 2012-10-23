@@ -38,7 +38,8 @@ namespace sftools
      */
     class NonInstanceable
     {
-        NonInstanceable(); //!< Private constructor to prevent instanciations
+    protected:
+        NonInstanceable() { } //!< Protected constructor to prevent instanciations
     };
 }
 
