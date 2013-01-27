@@ -370,6 +370,123 @@
               <Name>NonInstanceable</Name>
               <Path>classsftools_1_1_non_instanceable.html</Path>
               <Subnodes>
+               <Node>
+                <Name>NonInstanceable</Name>
+                <Path>classsftools_1_1_non_instanceable.html</Path>
+                <Anchor>a20feb9a00c09efbe9ac3213b6b9d4dc1</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>CurveInfo</Name>
+              <Path>structsftools_1_1_curve_info.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>astroid</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a7d582c2b683651babca1e7a3437728e9</Anchor>
+               </Node>
+               <Node>
+                <Name>circle</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>ac0ae51d354fdbbce95b5b546cb61c0f4</Anchor>
+               </Node>
+               <Node>
+                <Name>cosine</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a7a9450432e687b0b2cb906944b6e9a31</Anchor>
+               </Node>
+               <Node>
+                <Name>elipse</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>afcc7ea590c21687cef85253a1f2940eb</Anchor>
+               </Node>
+               <Node>
+                <Name>sine</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a8372dfef457d812cb1d2359b73a2b5d8</Anchor>
+               </Node>
+               <Node>
+                <Name>begin</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>ae964665befa36ad14519f6610ca04304</Anchor>
+               </Node>
+               <Node>
+                <Name>end</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a44c3c9b9e5dc0b21bd0affa6ded57651</Anchor>
+               </Node>
+               <Node>
+                <Name>f</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a68e0d9833b5b8126c581d8ef918d57cc</Anchor>
+               </Node>
+               <Node>
+                <Name>pointCount</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a7eb7209d2254f444e55a84694dba204c</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>Curve</Name>
+              <Path>classsftools_1_1_curve.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>Curve</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a03576dc153299381125607ec2b440baf</Anchor>
+               </Node>
+               <Node>
+                <Name>~Curve</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>adcf9ad8a6142e7c26b40615dc81996fa</Anchor>
+               </Node>
+               <Node>
+                <Name>draw</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>af5305c1ce5f93d0b1b45ec7450c9e815</Anchor>
+               </Node>
+               <Node>
+                <Name>getColor</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a9dbb5aa41ed8bad6dd93a422636b7a9c</Anchor>
+               </Node>
+               <Node>
+                <Name>getGlobalBounds</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a3fa08a018879d521449ff3836622ed7f</Anchor>
+               </Node>
+               <Node>
+                <Name>getInfo</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a4d33d126a6efbe57a9640505623496e2</Anchor>
+               </Node>
+               <Node>
+                <Name>getLocalBounds</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a3e394c8503a810a85a34de605eea65bb</Anchor>
+               </Node>
+               <Node>
+                <Name>getThickness</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>acb531a16d752f0fafe8d04af194482ca</Anchor>
+               </Node>
+               <Node>
+                <Name>setColor</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a57eff6dea710cb0a0799dcc12299c0c1</Anchor>
+               </Node>
+               <Node>
+                <Name>setInfo</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a1b9e7f6b3f2222b9512055ec88715384</Anchor>
+               </Node>
+               <Node>
+                <Name>setThickness</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>ab07988205c3047bc59c0410b11d6a281</Anchor>
+               </Node>
               </Subnodes>
              </Node>
              <Node>
@@ -487,12 +604,20 @@
             <Path>classsftools_1_1_chronometer.html</Path>
            </Node>
            <Node>
+            <Name>sftools::CurveInfo</Name>
+            <Path>structsftools_1_1_curve_info.html</Path>
+           </Node>
+           <Node>
             <Name>Drawable</Name>
             <Path></Path>
             <Subnodes>
              <Node>
               <Name>sftools::Animation</Name>
               <Path>classsftools_1_1_animation.html</Path>
+             </Node>
+             <Node>
+              <Name>sftools::Curve</Name>
+              <Path>classsftools_1_1_curve.html</Path>
              </Node>
             </Subnodes>
            </Node>
@@ -563,6 +688,10 @@
              <Node>
               <Name>sftools::Animation</Name>
               <Path>classsftools_1_1_animation.html</Path>
+             </Node>
+             <Node>
+              <Name>sftools::Curve</Name>
+              <Path>classsftools_1_1_curve.html</Path>
              </Node>
             </Subnodes>
            </Node>
@@ -709,6 +838,129 @@
            <Node>
             <Name>Common.hpp</Name>
             <Path>_common_8hpp.html</Path>
+           </Node>
+           <Node>
+            <Name>Curve.hpp</Name>
+            <Path>_curve_8hpp.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>CurveInfo</Name>
+              <Path>structsftools_1_1_curve_info.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>astroid</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a7d582c2b683651babca1e7a3437728e9</Anchor>
+               </Node>
+               <Node>
+                <Name>circle</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>ac0ae51d354fdbbce95b5b546cb61c0f4</Anchor>
+               </Node>
+               <Node>
+                <Name>cosine</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a7a9450432e687b0b2cb906944b6e9a31</Anchor>
+               </Node>
+               <Node>
+                <Name>elipse</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>afcc7ea590c21687cef85253a1f2940eb</Anchor>
+               </Node>
+               <Node>
+                <Name>sine</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a8372dfef457d812cb1d2359b73a2b5d8</Anchor>
+               </Node>
+               <Node>
+                <Name>begin</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>ae964665befa36ad14519f6610ca04304</Anchor>
+               </Node>
+               <Node>
+                <Name>end</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a44c3c9b9e5dc0b21bd0affa6ded57651</Anchor>
+               </Node>
+               <Node>
+                <Name>f</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a68e0d9833b5b8126c581d8ef918d57cc</Anchor>
+               </Node>
+               <Node>
+                <Name>pointCount</Name>
+                <Path>structsftools_1_1_curve_info.html</Path>
+                <Anchor>a7eb7209d2254f444e55a84694dba204c</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>Curve</Name>
+              <Path>classsftools_1_1_curve.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>Curve</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a03576dc153299381125607ec2b440baf</Anchor>
+               </Node>
+               <Node>
+                <Name>~Curve</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>adcf9ad8a6142e7c26b40615dc81996fa</Anchor>
+               </Node>
+               <Node>
+                <Name>draw</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>af5305c1ce5f93d0b1b45ec7450c9e815</Anchor>
+               </Node>
+               <Node>
+                <Name>getColor</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a9dbb5aa41ed8bad6dd93a422636b7a9c</Anchor>
+               </Node>
+               <Node>
+                <Name>getGlobalBounds</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a3fa08a018879d521449ff3836622ed7f</Anchor>
+               </Node>
+               <Node>
+                <Name>getInfo</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a4d33d126a6efbe57a9640505623496e2</Anchor>
+               </Node>
+               <Node>
+                <Name>getLocalBounds</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a3e394c8503a810a85a34de605eea65bb</Anchor>
+               </Node>
+               <Node>
+                <Name>getThickness</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>acb531a16d752f0fafe8d04af194482ca</Anchor>
+               </Node>
+               <Node>
+                <Name>setColor</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a57eff6dea710cb0a0799dcc12299c0c1</Anchor>
+               </Node>
+               <Node>
+                <Name>setInfo</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>a1b9e7f6b3f2222b9512055ec88715384</Anchor>
+               </Node>
+               <Node>
+                <Name>setThickness</Name>
+                <Path>classsftools_1_1_curve.html</Path>
+                <Anchor>ab07988205c3047bc59c0410b11d6a281</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>CurveFunction</Name>
+              <Path>_curve_8hpp.html</Path>
+              <Anchor>af1353b1677535880e8c8b8244b0af1f4</Anchor>
+             </Node>
+            </Subnodes>
            </Node>
            <Node>
             <Name>Frame.hpp</Name>
@@ -1085,6 +1337,11 @@
               <Name>NonInstanceable</Name>
               <Path>classsftools_1_1_non_instanceable.html</Path>
               <Subnodes>
+               <Node>
+                <Name>NonInstanceable</Name>
+                <Path>classsftools_1_1_non_instanceable.html</Path>
+                <Anchor>a20feb9a00c09efbe9ac3213b6b9d4dc1</Anchor>
+               </Node>
               </Subnodes>
              </Node>
             </Subnodes>
