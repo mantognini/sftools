@@ -37,23 +37,25 @@
 namespace sftools
 {
     /*!
-     * Type of a curve's function
+     * @brief Type of a curve's function
      *
      * Compute a point from one floating point paramter
      */
     typedef std::function<sf::Vector2f(float)> CurveFunction;
 
     /*!
-     * Holds all informations used to compute the points of a curve
+     * @brief Holds all informations used to compute the points of a curve
      *
      * The curve's points are computed with f(p) where p is in the range [begin, end].
      * PointCount defines the "resolution" or "accuracy" of the computation.
+     *
+     * @see Curve
      */
     struct CurveInfo
     {
     public:
         /*!
-         * Build a CurveInfo that represents an elipse
+         * @brief Build a CurveInfo that represents an elipse
          *
          * @param a semi-major axis
          * @param b semi-minor axis
@@ -71,7 +73,7 @@ namespace sftools
         }
 
         /*!
-         * Build a CurveInfo that represents a circle
+         * @brief Build a CurveInfo that represents a circle
          *
          * @param r radius
          * @param begin start angle in radian
@@ -84,7 +86,7 @@ namespace sftools
         }
 
         /*!
-         * Build a CurveInfo that represents a sine
+         * @brief Build a CurveInfo that represents a sine
          *
          * @param a x-axis factor
          * @param b y-axis factor
@@ -102,7 +104,7 @@ namespace sftools
         }
 
         /*!
-         * Build a CurveInfo that represents a cosine
+         * @brief Build a CurveInfo that represents a cosine
          *
          * @param a x-axis factor
          * @param b y-axis factor
@@ -120,7 +122,7 @@ namespace sftools
         }
 
         /*!
-         * Build a CurveInfo that represents an astroid
+         * @brief Build a CurveInfo that represents an astroid
          *
          * @param a half astroid-size
          * @param begin start angle in radian
@@ -144,20 +146,22 @@ namespace sftools
     };
 
     /*!
-     * Drawable representing a mathematical curve.
+     * @brief Drawable representing a mathematical curve.
      *
      * You can draw partial circle, ellipse, sine, etc... curves with this class. Here is an example :
      *
      * @code
      * sftools::Curve astroid(sftools::CurveInfo::astroid(50, 0, 6.283185307, 120), sf::Color::Blue, 2);
      * @endcode
+     *
+     * @see CurveInfo
      */
     class Curve : public sf::Drawable,
                   public sf::Transformable
     {
     public:
         /*!
-         * Construct a curve
+         * @brief Construct a curve
          *
          * @param info curve's info
          * @param color curve's color
@@ -173,7 +177,7 @@ namespace sftools
         }
 
         /*!
-         * Virtual destructor
+         * @brief Virtual destructor
          */
         virtual ~Curve()
         {
@@ -181,7 +185,7 @@ namespace sftools
         }
         
         /*!
-         * Get the local bounding rectangle of the entity
+         * @brief Get the local bounding rectangle of the entity
          *
          * The returned rectangle is in local coordinates, which means
          * that it ignores the transformations (translation, rotation,
@@ -197,7 +201,7 @@ namespace sftools
         }
 
         /*!
-         * Get the global bounding rectangle of the entity
+         * @brief Get the global bounding rectangle of the entity
          *
          * The returned rectangle is in global coordinates, which means
          * that it takes in account the transformations (translation,
@@ -213,7 +217,7 @@ namespace sftools
         }
 
         /*!
-         * Get the curve's info
+         * @brief Get the curve's info
          *
          * @return the curve's info
          */
@@ -223,7 +227,7 @@ namespace sftools
         }
 
         /*!
-         * Set the curve's info
+         * @brief Set the curve's info
          *
          * @return info new curve's info
          */
@@ -234,7 +238,7 @@ namespace sftools
         }
 
         /*!
-         * Get the curve's color
+         * @brief Get the curve's color
          *
          * @return curve's color
          */
@@ -244,7 +248,7 @@ namespace sftools
         }
 
         /*!
-         * Set the curve's color
+         * @brief Set the curve's color
          *
          * @param color new curve's color
          */
@@ -255,7 +259,7 @@ namespace sftools
         }
 
         /*!
-         * Get the curve's thickness
+         * @brief Get the curve's thickness
          *
          * @return curve's thickness
          */
@@ -265,7 +269,7 @@ namespace sftools
         }
 
         /*!
-         * Set the curve's thickness
+         * @brief Set the curve's thickness
          *
          * @param thickness new curve's thickness
          */
@@ -277,7 +281,7 @@ namespace sftools
 
     protected:
         /*!
-         * Draw the curve to a render target
+         * @brief Draw the curve to a render target
          *
          * @param target Render target to draw to
          * @param states Current render states
@@ -290,7 +294,7 @@ namespace sftools
 
     private:
         /*!
-         * Update vertices cache.
+         * @brief Update vertices cache.
          */
         void update()
         {
@@ -330,7 +334,7 @@ namespace sftools
         }
 
         /*!
-         * Update vertices' color only
+         * @brief Update vertices' color only
          *
          * No need to recompute every points.
          */
