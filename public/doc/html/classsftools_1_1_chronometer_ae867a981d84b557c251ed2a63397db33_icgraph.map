@@ -1,0 +1,9 @@
+<map id="sftools::Chronometer::getElapsedTime" name="sftools::Chronometer::getElapsedTime">
+<area shape="rect" id="node3" href="$classsftools_1_1_chronometer.html#a1cffb03c624aab77f3a13307901c287a" title="Add some time." alt="" coords="395,41,570,69"/>
+<area shape="rect" id="node7" href="$classsftools_1_1_chronometer.html#a63dab63c738bf58ee65c1a0439423182" title="Implicit conversion to sf::Time." alt="" coords="201,33,346,77"/>
+<area shape="rect" id="node9" href="$classsftools_1_1_chronometer.html#a9e04f23aad38e94c3d5e526bdde077a9" title="Pause the chronometer." alt="" coords="201,101,346,145"/>
+<area shape="rect" id="node11" href="$classsftools_1_1_chronometer.html#a00c677f5efe30149ed7d6a08d1acc806" title="Pause or resume the chronometer." alt="" coords="410,157,555,201"/>
+<area shape="rect" id="node13" href="$classsftools_1_1_chronometer.html#a9682fc0aeba4ad70c5e1e3e3b051b391" title="Reset the chronometer." alt="" coords="410,225,555,269"/>
+<area shape="rect" id="node16" href="$classsftools_1_1_chronometer.html#a363704c8716ef5ee4d695b324b713af5" title="Resume the chronometer." alt="" coords="201,221,346,265"/>
+<area shape="rect" id="node5" href="$classsftools_1_1_chronometer.html#a24943b61ebd155450a396c2eb6487f54" title="Constructor." alt="" coords="619,129,765,173"/>
+</map>

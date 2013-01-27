@@ -9,6 +9,7 @@
     </TokenIdentifier>
     <Path>namespacesftools.html</Path>
     <Anchor>af1353b1677535880e8c8b8244b0af1f4</Anchor>
+    <Abstract>Type of a curve&amp;#39;s function.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -253,6 +254,7 @@
     </TokenIdentifier>
     <Path>namespacesftools.html</Path>
     <Anchor>af1353b1677535880e8c8b8244b0af1f4</Anchor>
+    <Abstract>Type of a curve&amp;#39;s function.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -844,6 +846,7 @@
       <Scope>sftools::CurveInfo</Scope>
     </TokenIdentifier>
     <Path>structsftools_1_1_curve_info.html</Path>
+    <Abstract>Holds all informations used to compute the points of a curve.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -855,6 +858,7 @@
     </TokenIdentifier>
     <Path>structsftools_1_1_curve_info.html</Path>
     <Anchor>afcc7ea590c21687cef85253a1f2940eb</Anchor>
+    <Abstract>Build a CurveInfo that represents an elipse.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -866,6 +870,7 @@
     </TokenIdentifier>
     <Path>structsftools_1_1_curve_info.html</Path>
     <Anchor>ac0ae51d354fdbbce95b5b546cb61c0f4</Anchor>
+    <Abstract>Build a CurveInfo that represents a circle.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -877,6 +882,7 @@
     </TokenIdentifier>
     <Path>structsftools_1_1_curve_info.html</Path>
     <Anchor>a8372dfef457d812cb1d2359b73a2b5d8</Anchor>
+    <Abstract>Build a CurveInfo that represents a sine.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -888,6 +894,7 @@
     </TokenIdentifier>
     <Path>structsftools_1_1_curve_info.html</Path>
     <Anchor>a7a9450432e687b0b2cb906944b6e9a31</Anchor>
+    <Abstract>Build a CurveInfo that represents a cosine.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -899,6 +906,7 @@
     </TokenIdentifier>
     <Path>structsftools_1_1_curve_info.html</Path>
     <Anchor>a7d582c2b683651babca1e7a3437728e9</Anchor>
+    <Abstract>Build a CurveInfo that represents an astroid.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -953,6 +961,7 @@
       <Scope>sftools::Curve</Scope>
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
+    <Abstract>Drawable representing a mathematical curve.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -964,6 +973,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>a03576dc153299381125607ec2b440baf</Anchor>
+    <Abstract>Construct a curve.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -975,6 +985,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>adcf9ad8a6142e7c26b40615dc81996fa</Anchor>
+    <Abstract>Virtual destructor.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -986,6 +997,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>a3e394c8503a810a85a34de605eea65bb</Anchor>
+    <Abstract>Get the local bounding rectangle of the entity.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -997,6 +1009,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>a3fa08a018879d521449ff3836622ed7f</Anchor>
+    <Abstract>Get the global bounding rectangle of the entity.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1008,6 +1021,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>a4d33d126a6efbe57a9640505623496e2</Anchor>
+    <Abstract>Get the curve&amp;#39;s info.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1019,6 +1033,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>a1b9e7f6b3f2222b9512055ec88715384</Anchor>
+    <Abstract>Set the curve&amp;#39;s info.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1030,6 +1045,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>a9dbb5aa41ed8bad6dd93a422636b7a9c</Anchor>
+    <Abstract>Get the curve&amp;#39;s color.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1041,6 +1057,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>a57eff6dea710cb0a0799dcc12299c0c1</Anchor>
+    <Abstract>Set the curve&amp;#39;s color.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1052,6 +1069,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>acb531a16d752f0fafe8d04af194482ca</Anchor>
+    <Abstract>Get the curve&amp;#39;s thickness.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1063,6 +1081,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>ab07988205c3047bc59c0410b11d6a281</Anchor>
+    <Abstract>Set the curve&amp;#39;s thickness.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>
@@ -1074,6 +1093,7 @@
     </TokenIdentifier>
     <Path>classsftools_1_1_curve.html</Path>
     <Anchor>af5305c1ce5f93d0b1b45ec7450c9e815</Anchor>
+    <Abstract>Draw the curve to a render target.</Abstract>
     <DeclaredIn>Curve.hpp</DeclaredIn>
   </Token>
   <Token>

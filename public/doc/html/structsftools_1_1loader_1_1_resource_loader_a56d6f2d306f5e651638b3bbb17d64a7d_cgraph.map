@@ -1,0 +1,6 @@
+<map id="sftools::loader::ResourceLoader::operator()" name="sftools::loader::ResourceLoader::operator()">
+<area shape="rect" id="node3" href="$classsftools_1_1_locations.html#ae797ffe75103f586eb998ee569113f6e" title="Return an iterator on the first location." alt="" coords="247,5,372,49"/>
+<area shape="rect" id="node5" href="$classsftools_1_1_locations.html#a4b75a4c939cc58f414042dd66f436746" title="Return an iterator to the element following the last location." alt="" coords="232,73,386,101"/>
+<area shape="rect" id="node7" href="$classsftools_1_1_singleton.html#a33eaaac3791d7c887675d8a70e7015eb" title="Get the unique instance." alt="" coords="248,125,371,169"/>
+<area shape="rect" id="node9" href="$structsftools_1_1loader_1_1_resource_loader.html#ac94b06cf6618d88f7cc96002f158ddf3" title="Load the content of a resource with the given file." alt="" coords="225,193,394,237"/>
+</map>

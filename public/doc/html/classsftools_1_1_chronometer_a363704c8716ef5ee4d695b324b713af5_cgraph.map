@@ -1,0 +1,4 @@
+<map id="sftools::Chronometer::resume" name="sftools::Chronometer::resume">
+<area shape="rect" id="node3" href="$classsftools_1_1_chronometer.html#ae867a981d84b557c251ed2a63397db33" title="Give the amount of time elapsed since the chronometer was started." alt="" coords="201,5,346,49"/>
+<area shape="rect" id="node5" href="$classsftools_1_1_chronometer.html#a4dbb07c686c367137fd44e13af1699c6" title="Tell the chronometer is running or not." alt="" coords="201,73,346,117"/>
+</map>

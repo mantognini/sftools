@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node3" href="$classsftools_1_1_animation.html" title="Drawable capable of rendering an animation based on a stream of frames." alt="" coords="161,5,287,33"/>
-<area shape="rect" id="node5" href="$classsftools_1_1_curve.html" title="sftools::Curve" alt="" coords="173,57,275,85"/>
+<area shape="rect" id="node5" href="$classsftools_1_1_curve.html" title="Drawable representing a mathematical curve." alt="" coords="173,57,275,85"/>
 </map>
