@@ -38,3 +38,9 @@ Animation
 
 `sftools` provides a set of class to render animation based on a sequence of frames. These classes are `Animation` which is a `sf::Drawable`, `Frame` which holds the data used to render one frame, and `FrameStream` that manages a sequence of frames.
 
+
+Curve
+-----
+
+`sf::Shape` are great if you want to display circle and convex polygons. But what about arcs, ellipses, sines or astroid ? `sftools` empowers SFML and provides `Wave` to easily draw any parametric equation !
+
