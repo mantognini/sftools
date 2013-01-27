@@ -3,7 +3,7 @@ sftools
 
 Bunch of tools for SFML 2.0 application development.
 
-It's a header-only library written in C++03 to keep maximum compatibility with most compilers.
+It's a header-only library written mostly in C++98 to keep maximum compatibility with most compilers (some extensions needs C++11 though).
 
 Have a look at [sftools' website](http://mantognini.github.com/sftools/) for downloads, installation instruction, documentation and tutorials.
 
@@ -43,4 +43,6 @@ Curve
 -----
 
 `sf::Shape` are great if you want to display circle and convex polygons. But what about arcs, ellipses, sines or astroid ? `sftools` empowers SFML and provides `Curve` to easily draw any parametric equation !
+
+Note that `Curve` requires C++11.
 
