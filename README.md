@@ -42,5 +42,5 @@ Animation
 Curve
 -----
 
-`sf::Shape` are great if you want to display circle and convex polygons. But what about arcs, ellipses, sines or astroid ? `sftools` empowers SFML and provides `Wave` to easily draw any parametric equation !
+`sf::Shape` are great if you want to display circle and convex polygons. But what about arcs, ellipses, sines or astroid ? `sftools` empowers SFML and provides `Curve` to easily draw any parametric equation !
 
