@@ -278,7 +278,11 @@ namespace sftools
          * @param target Render target to draw to
          * @param states Current render states
          */
-        virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+        virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
+        {
+            states.transform *= getTransform();
+            target.draw(m_vertices, states);
+        }
 
     private:
         /*!
