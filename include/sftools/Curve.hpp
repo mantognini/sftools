@@ -118,6 +118,23 @@ namespace sftools
 
             return { f, begin, end, pointCount };
         }
+
+        /*!
+         * Build a CurveInfo that represents an astroid
+         *
+         * @param a half astroid-size
+         * @param begin start angle in radian
+         * @param end end angle in radian
+         * @param pointCount "resolution" or "accuracy" of the computation.
+         */
+        static CurveInfo astroid(float a, float begin, float end, unsigned int pointCount)
+        {
+            auto f = [a](float t) -> sf::Vector2f {
+                return { a * std::pow(std::cos(t), 3), a * std::pow(std::sin(t), 3) };
+            };
+
+            return { f, begin, end, pointCount };
+        }
         
     public:
         CurveFunction f; ///< Curve's function
