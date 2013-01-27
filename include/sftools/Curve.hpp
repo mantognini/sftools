@@ -63,7 +63,7 @@ namespace sftools
          */
         static CurveInfo elipse(float a, float b, float begin, float end, unsigned int pointCount)
         {
-            auto f = [a, b](float t) -> GPoint {
+            auto f = [a, b](float t) -> sf::Vector2f {
                 return { a * std::cos(t), b * std::sin(t) };
             };
 
@@ -94,7 +94,7 @@ namespace sftools
          */
         static CurveInfo sine(float a, float b, float begin, float end, unsigned int pointCount)
         {
-            auto f = [a, b](float t) -> GPoint {
+            auto f = [a, b](float t) -> sf::Vector2f {
                 return { a * t, b * std::sin(t) };
             };
 
@@ -112,7 +112,7 @@ namespace sftools
          */
         static CurveInfo cosine(float a, float b, float begin, float end, unsigned int pointCount)
         {
-            auto f = [a, b](float t) -> GPoint {
+            auto f = [a, b](float t) -> sf::Vector2f {
                 return { a * t, b * std::cos(t) };
             };
 
@@ -294,11 +294,11 @@ namespace sftools
             // Compute the points of the outline
             for (unsigned int i = 1; i < m_info.pointCount * 2 - 1; i += 2) {
                 // Compute the normal of the two points (p0 and p2) of the curve that are next to this outline point (p1)
-                GPoint const& p0 = m_vertices[i - 1].position;
-                GPoint const& p2 = m_vertices[i + 1].position;
-                GPoint const  n  = normalisedNormal(p0, p2);
-                GPoint const  m  = (p0 + p2) / 2.f;
-                GPoint const  p1 = m + n * m_thickness;
+                sf::Vector2f const& p0 = m_vertices[i - 1].position;
+                sf::Vector2f const& p2 = m_vertices[i + 1].position;
+                sf::Vector2f const  n  = normalisedNormal(p0, p2);
+                sf::Vector2f const  m  = (p0 + p2) / 2.f;
+                sf::Vector2f const  p1 = m + n * m_thickness;
                 
                 m_vertices[i] = { p1, m_color };
             }
