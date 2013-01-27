@@ -146,7 +146,11 @@ namespace sftools
     /*!
      * Drawable representing a mathematical curve.
      *
-     * You can draw partial circle, ellipse, sine, etc... curves with this class.
+     * You can draw partial circle, ellipse, sine, etc... curves with this class. Here is an example :
+     *
+     * @code
+     * sftools::Curve astroid(sftools::CurveInfo::astroid(50, 0, 6.283185307, 120), sf::Color::Blue, 2);
+     * @endcode
      */
     class Curve : public sf::Drawable,
                   public sf::Transformable
