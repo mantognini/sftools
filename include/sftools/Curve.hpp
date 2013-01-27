@@ -32,6 +32,7 @@
 #define __SFTOOLS_CURVE_HPP__
 
 #include <SFML/Graphics.hpp>
+#include <cmath>
 
 namespace sftools
 {
