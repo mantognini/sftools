@@ -47,7 +47,10 @@ namespace sftools
      * @brief Holds all informations used to compute the points of a curve
      *
      * The curve's points are computed with f(p) where p is in the range [begin, end].
+     *
      * PointCount defines the "resolution" or "accuracy" of the computation.
+     * Don't rely on this value for your computation; the implementation might
+     * use a number of points different.
      *
      * @see Curve
      */
@@ -137,7 +140,7 @@ namespace sftools
 
             return { f, begin, end, pointCount };
         }
-        
+
     public:
         CurveFunction f; ///< Curve's function
         float begin; ///< First value of the curve's parameter
@@ -183,7 +186,7 @@ namespace sftools
         {
             // Nothing to do here.
         }
-        
+
         /*!
          * @brief Get the local bounding rectangle of the entity
          *
@@ -305,31 +308,56 @@ namespace sftools
                 sf::Vector2f const v = a - b;
                 sf::Vector2f const n = { v.y, -v.x };
                 float const length = std::sqrt(n.x * n.x + n.y * n.y);
-                
+
                 return length != 0.0 ? n / length : n;
             };
 
+            // Note : m_info.end is not in the evaluation range of the curve
+
             m_vertices.clear();
-            m_vertices.resize(m_info.pointCount * 2 - 1); // Count points for the curve and (count - 1) points for the outline
-            // (that is, one point for the outline between each point of the curve)
+            m_vertices.resize(m_info.pointCount * 2 + 1); // (count + 1) points for the curve and count points for the outline
+            // (That is, one point for the outline between each point of the curve.)
+            // (We need one more point on the curve to include both extremes.)
 
             // Compute the points of the curve
             float const step = (m_info.end - m_info.begin) / m_info.pointCount;
-            for (unsigned int i = 0; i < m_info.pointCount; ++i) {
+            for (unsigned int i = 0; i <= m_info.pointCount; ++i) { // from begin to end, inclusive, so count + 1 steps
                 float const t = m_info.begin + step * i;
                 m_vertices[i * 2] = { m_info.f(t), m_color }; // one vertex over two because of the outline
             }
 
             // Compute the points of the outline
-            for (unsigned int i = 1; i < m_info.pointCount * 2 - 1; i += 2) {
+            for (unsigned int i = 1; i < m_info.pointCount * 2; i += 2) {
                 // Compute the normal of the two points (p0 and p2) of the curve that are next to this outline point (p1)
                 sf::Vector2f const& p0 = m_vertices[i - 1].position;
                 sf::Vector2f const& p2 = m_vertices[i + 1].position;
                 sf::Vector2f const  n  = normalisedNormal(p0, p2);
                 sf::Vector2f const  m  = (p0 + p2) / 2.f;
                 sf::Vector2f const  p1 = m + n * m_thickness;
-                
+
                 m_vertices[i] = { p1, m_color };
+            }
+
+            // Now, let's be clever !
+            //
+            // If the first and last points are very close
+            // then we add another point for the outline in order to "link" them together.
+            sf::Vector2f const& begin = m_vertices[0].position;
+            sf::Vector2f const& end   = m_vertices[m_vertices.getVertexCount() - 1].position;
+            sf::Vector2f const  delta = end - begin;
+            float const length = std::sqrt(delta.x * delta.x + delta.y * delta.y);
+            if (length <= 0.1f) { // Close enough !
+                // This last outline point is computed from the first and last outline points
+                // because we can't compute a normal vector between begin and end
+                // (it might well be zero).
+                sf::Vector2f const& first = m_vertices[1].position;
+                sf::Vector2f const& last  = m_vertices[m_vertices.getVertexCount() - 2].position;
+                sf::Vector2f const  mid   = (first + last) / 2.f;
+
+                m_vertices.append({ mid, m_color });
+
+                // And to make things even prettier we add the first outline point again to end the loop
+                m_vertices.append(m_vertices[1]);
             }
         }
 
@@ -344,7 +372,7 @@ namespace sftools
                 m_vertices[i].color = m_color;
             }
         }
-
+        
     private:
         sf::VertexArray m_vertices; ///< curve's cache
         CurveInfo m_info; ///< curve's info
